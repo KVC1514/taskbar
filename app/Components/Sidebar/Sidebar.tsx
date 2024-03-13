@@ -9,7 +9,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "../Button/Button";
 import { logout } from "@/app/utils/Icons";
-import { useClerk } from "@clerk/nextjs";
+import { UserButton, useClerk } from "@clerk/nextjs";
 
 function Sidebar() {
   const { theme } = useGlobalState();
@@ -28,6 +28,9 @@ function Sidebar() {
         <div className="profile-overlay"></div>
         <div className="image">
           <Image width={70} height={70} src="/avatar1.jpg" alt="profile" />
+        </div>
+        <div className="user-btn absolute z-20 top-0 w-full h-full">
+          <UserButton />
         </div>
         <h1>
           <span>Sin</span>
